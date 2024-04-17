@@ -1,0 +1,7 @@
+C:\PROJETOS\ApiJWT\WebApiJWT\WebApiJWT\obj\Debug\net8.0\WebApiJWT.csproj.AssemblyReference.cache
+C:\PROJETOS\ApiJWT\WebApiJWT\WebApiJWT\obj\Debug\net8.0\WebApiJWT.GeneratedMSBuildEditorConfig.editorconfig
+C:\PROJETOS\ApiJWT\WebApiJWT\WebApiJWT\obj\Debug\net8.0\WebApiJWT.AssemblyInfoInputs.cache
+C:\PROJETOS\ApiJWT\WebApiJWT\WebApiJWT\obj\Debug\net8.0\WebApiJWT.AssemblyInfo.cs
+C:\PROJETOS\ApiJWT\WebApiJWT\WebApiJWT\obj\Debug\net8.0\WebApiJWT.csproj.CoreCompileInputs.cache
+C:\PROJETOS\ApiJWT\WebApiJWT\WebApiJWT\obj\Debug\net8.0\WebApiJWT.MvcApplicationPartsAssemblyInfo.cs
+C:\PROJETOS\ApiJWT\WebApiJWT\WebApiJWT\obj\Debug\net8.0\WebApiJWT.MvcApplicationPartsAssemblyInfo.cache
