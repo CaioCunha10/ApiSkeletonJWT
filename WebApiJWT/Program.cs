@@ -1,3 +1,8 @@
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.IdentityModel.Tokens;
+using WebApiJWT.Repository;
+using WebApiJWT.Token;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -6,6 +11,38 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+builder.Services.AddSingleton<InterfaceProduct, RepositoryProduct>();
+
+builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+       .AddJwtBearer(option =>
+       {
+           option.TokenValidationParameters = new TokenValidationParameters
+           {
+               ValidateIssuer = false,
+               ValidateAudience = false,
+               ValidateLifetime = true,
+               ValidateIssuerSigningKey = true,
+
+               ValidIssuer = "Teste.Securiry.Bearer",
+               ValidAudience = "Teste.Securiry.Bearer",
+               IssuerSigningKey = JwtSecurityKey.Create("Secret_Key-12345678")
+           };
+
+           option.Events = new JwtBearerEvents
+           {
+               OnAuthenticationFailed = context =>
+               {
+                   Console.WriteLine("OnAuthenticationFailed: " + context.Exception.Message);
+                   return Task.CompletedTask;
+               },
+               OnTokenValidated = context =>
+               {
+                   Console.WriteLine("OnTokenValidated: " + context.SecurityToken);
+                   return Task.CompletedTask;
+               }
+           };
+       });
+       
 
 var app = builder.Build();
 
@@ -17,6 +54,8 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+
+app.UseAuthentication();
 
 app.UseAuthorization();
 
