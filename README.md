@@ -1,5 +1,6 @@
 # WebApiJWT
-![Security API Authentcation](assets/giphy.gif)
+![Security API Authentcation](C:/PROJETOS/ApiJWT/WebApiJWT/assets/giphy.gif)
+
 
 ## Descrição
 Este é um projeto de exemplo que demonstra a implementação de autenticação JWT em uma API Web utilizando ASP.NET Core.
