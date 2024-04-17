@@ -1,5 +1,5 @@
 # WebApiJWT
-![Security API Authentcation](C:/PROJETOS/ApiJWT/WebApiJWT/assets/giphy.gif)
+![Security API Authentcation](C:\PROJETOS\ApiJWT\WebApiJWT\WebApiJWT\assets/giphy.gif)
 
 
 ## Descrição
