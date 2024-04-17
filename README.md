@@ -1,5 +1,5 @@
 # WebApiJWT
-![Security API Authentication](assets/security.gif)
+![Security API Authentication](img/security.gif)
 
 
 ## Descrição
