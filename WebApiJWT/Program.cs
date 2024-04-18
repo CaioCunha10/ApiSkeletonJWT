@@ -1,5 +1,8 @@
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
+using WebApiJWT.Config;
+using WebApiJWT.Entities;
 using WebApiJWT.Repository;
 using WebApiJWT.Token;
 
@@ -11,6 +14,14 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
+builder.Services.AddDbContext<ContextBase>(options =>
+                           options.UseSqlServer(
+                                builder.Configuration.GetConnectionString("DefaultConnection")));
+builder.Services.AddDefaultIdentity<ApplicationUser>(options => options.SignIn.RequireConfirmedAccount = false)
+                               .AddEntityFrameworkStores<ContextBase>();
+
+//interfaces e repositório
 builder.Services.AddSingleton<InterfaceProduct, RepositoryProduct>();
 
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)

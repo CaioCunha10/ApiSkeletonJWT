@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("WebApiJWT")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c5b952a10b5b086ac2b6f33e1b03f62e6e4f252b")]
 [assembly: System.Reflection.AssemblyProductAttribute("WebApiJWT")]
 [assembly: System.Reflection.AssemblyTitleAttribute("WebApiJWT")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

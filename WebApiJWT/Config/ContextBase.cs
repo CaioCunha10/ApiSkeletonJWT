@@ -35,7 +35,8 @@ namespace WebApiJWT.Config
 
         public string ObterStringConexao()
         {
-            return "";
+            return "Host=localhost;Port=5432;Database=DbFilms;Username=postgres;Password=soad@io;";
         }
+
     }
 }
